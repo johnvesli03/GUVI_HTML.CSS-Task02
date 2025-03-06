@@ -1,0 +1,140 @@
+<html>
+
+<head>
+    <title>Survey Form</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style>
+        @media (max-width: 640px) {
+            .form-container {
+                width: 90%;
+                padding: 1.5rem;
+            }
+            table {
+                font-size: 0.875rem;
+            }
+            th,
+            td {
+                padding: 0.25rem;
+            }
+            input[type="radio"] {
+                transform: scale(0.9);
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .form-container {
+                width: 75%;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 flex justify-center items-center min-h-screen p-6 h-100vh">
+    <div class="w-full max-w-4xl bg-white p-6 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-semibold text-center mb-4">Survey Form</h2>
+        <form>
+            <div class="mb-4">
+                <label class="block font-medium">Name <span class="text-red-500">*</span></label>
+                <div class="flex gap-2 mt-1">
+                    <input type="text" class="w-1/2 border rounded p-2" placeholder="First">
+                    <input type="text" class="w-1/2 border rounded p-2" placeholder="Last">
+                </div>
+            </div>
+            <div class="mb-4">
+                <label class="block font-medium">Email <span class="text-red-500">*</span></label>
+                <input type="email" class="w-full border rounded p-2 mt-1" placeholder="Email">
+            </div>
+            <div class="mb-4">
+                <label class="block font-medium">Your Experience <span class="text-red-500">*</span></label>
+                <div class="text-yellow-400 text-2xl">★★★★★</div>
+            </div>
+            <div class="mb-4">
+                <label class="block font-medium">Satisfaction Level <span class="text-red-500">*</span></label>
+                <table class="w-full table-auto border text-center mt-2">
+                    <thead>
+                        <tr class="bg-gray-200">
+                            <th class="w-1/4 text-left px-4 py-2">Aspect</th>
+                            <th class="px-4 py-2">Very Unsatisfied</th>
+                            <th class="px-4 py-2">Unsatisfied</th>
+                            <th class="px-4 py-2">Neutral</th>
+                            <th class="px-4 py-2">Satisfied</th>
+                            <th class="px-4 py-2">Very Satisfied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b">
+                            <td class="text-left px-4 py-2">Purchase</td>
+                            <td><input type="radio" name="purchase" value="Very Unsatisfied"></td>
+                            <td><input type="radio" name="purchase" value="Unsatisfied"></td>
+                            <td><input type="radio" name="purchase" value="Neutral"></td>
+                            <td><input type="radio" name="purchase" value="Satisfied"></td>
+                            <td><input type="radio" name="purchase" value="Very Satisfied"></td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="text-left px-4 py-2">Service</td>
+                            <td><input type="radio" name="service" value="Very Unsatisfied"></td>
+                            <td><input type="radio" name="service" value="Unsatisfied"></td>
+                            <td><input type="radio" name="service" value="Neutral"></td>
+                            <td><input type="radio" name="service" value="Satisfied"></td>
+                            <td><input type="radio" name="service" value="Very Satisfied"></td>
+                        </tr>
+                        <tr>
+                            <td class="text-left px-4 py-2">Company Overall</td>
+                            <td><input type="radio" name="company" value="Very Unsatisfied"></td>
+                            <td><input type="radio" name="company" value="Unsatisfied"></td>
+                            <td><input type="radio" name="company" value="Neutral"></td>
+                            <td><input type="radio" name="company" value="Satisfied"></td>
+                            <td><input type="radio" name="company" value="Very Satisfied"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="mb-4">
+                <label class="block font-medium">Likelihood to Recommend <span class="text-red-500">*</span></label>
+                <table class="w-full border text-center mt-2">
+                    <tr class="bg-gray-200">
+                        <th class="w-1/2 text-left px-4 py-2">Question</th>
+                        <th class="px-2 py-2">Very Unlikely</th>
+                        <th class="px-2 py-2">Unlikely</th>
+                        <th class="px-2 py-2">Neutral</th>
+                        <th class="px-2 py-2">Likely</th>
+                        <th class="px-2 py-2">Very Likely</th>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="text-left px-4 py-2">Buy from us again</td>
+                        <td><input type="radio" name="buy-again" value="1"></td>
+                        <td><input type="radio" name="buy-again" value="2"></td>
+                        <td><input type="radio" name="buy-again" value="3"></td>
+                        <td><input type="radio" name="buy-again" value="4"></td>
+                        <td><input type="radio" name="buy-again" value="5"></td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="text-left px-4 py-2">Recommend our product to others</td>
+                        <td><input type="radio" name="recommend-product" value="1"></td>
+                        <td><input type="radio" name="recommend-product" value="2"></td>
+                        <td><input type="radio" name="recommend-product" value="3"></td>
+                        <td><input type="radio" name="recommend-product" value="4"></td>
+                        <td><input type="radio" name="recommend-product" value="5"></td>
+                    </tr>
+                    <tr>
+                        <td class="text-left px-4 py-2">Recommend our company to others</td>
+                        <td><input type="radio" name="recommend-company" value="1"></td>
+                        <td><input type="radio" name="recommend-company" value="2"></td>
+                        <td><input type="radio" name="recommend-company" value="3"></td>
+                        <td><input type="radio" name="recommend-company" value="4"></td>
+                        <td><input type="radio" name="recommend-company" value="5"></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="mb-4">
+                <label class="block font-medium">Additional Comments</label>
+                <textarea class="w-full border rounded p-2 h-20 mt-1" placeholder="Your feedback..."></textarea>
+            </div>
+            <button class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
